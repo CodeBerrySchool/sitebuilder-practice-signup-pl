@@ -1,0 +1,62 @@
+/**
+ * OGÓLNIE
+ *
+ * Ten plik obsługuje layout strony. Zamiast konfigurować layouty
+ * komponentów jeden po drugim, tworzymy osobny system, którego
+ * celem jest tylko jedno – mówienie każdemu elementowi, jaki
+ * powinien mieć rozmiar i gdzie powinien się pojawić.
+ *
+ * Zadeklarowane tutaj klasy mogą być wywołane na każdym containerze, aby
+ * nadać im odpowiedni rozmiar i sprawić, by zachowywały się w konkretny sposób.
+ */
+
+/**
+ * SPIS TREŚCI
+ *
+ * LAYOUT
+ * Elementy.................Reguły wielkości containerów.
+ * Modifiery..............Reguły, które modyfikują layout, np. float.
+ *
+ * HELPERSY
+ * Clearfix...............Klasa, która może być wywołana na containerach float.
+ */
+
+
+
+
+
+/*------------------------------------*\
+  #LAYOUT
+\*------------------------------------*/
+
+/**
+ * Jeśli chcesz użyć float na elemencie, te klasy Ci w tym pomogą.
+ * Nie zapomnij o wywołaniu klasy .clearfix
+ * z sekcji HELPERSY containera.
+ */
+
+.layout__item--full-width           { width: 100%; }
+
+.layout__item--50-percent           { width: 50%; }
+
+
+.layout__item--full-height-w-footer { min-height: calc(100vh - 11.1111vh); }
+
+
+.layout__item--floated-left  { float: left; } /* [1] */
+
+.layout__item--floated-right { float: right; }/* [1] */
+
+
+
+
+
+/*------------------------------------*\
+  #HELPERSY
+\*------------------------------------*/
+
+.clearfix:after {
+  content:  "";
+  display:  table;
+  clear:    both;
+}

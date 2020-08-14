@@ -1,0 +1,85 @@
+/**
+ * OGÓLNIE
+ *
+ * Projekt podzielony jest na kilka osobnych arkuszy:
+ *
+ * normalize.min.css.....Reset CSS, aby przeglądarki zaczynały jednakowo.
+ * base.css..............Zasady ogólne i pomocnicze.
+ * layout.css............Reguły CSS odpowiadające za layout strony.
+ * components.css........Zbiór komponentów CSS tworzących stronę.
+ */
+
+
+/**
+ * SPIS TREŚCI
+ *
+ * USTAWIENIA
+ * Box-sizing...........Domyślne ustawienia ogólne naszej strony.
+ * Base font-size.......Deklaracja wyjściowego rozmiaru czcionki.
+ * Margins..............Ogólne wartości marginesów top oraz bottom.
+ * Anchor...............Domyślne ustawienia linków.
+ *
+ * TYPOGRAFIA
+ * Headings............Style typograficzne.
+ */
+
+
+
+
+
+/*------------------------------------*\
+  #USTAWIENIA
+\*------------------------------------*/
+
+/**
+* 1. Bardziej rozsądny model box-sizing.
+ *
+ * 2. Ta regula zmienia wartość base font-size,
+ * do której wszystkie jednostki rem są porównywane.
+ *
+ * 3. Plik Normalize.css ustawia top oraz bottom margin dla tych elementów.
+ * Może to kolidować z naszych layoutem, dlatego nadpisujemy go tą regułą.
+ *
+ * 4. Dajemy ogólny bottom-margin dla głównych elementów typografii,
+ * dzięki czemu na całej naszej stronie wszystkie poziome marginesy będą
+ * takie same. W konkretnych przypadkach, możemy to później nadpisać.
+ */
+
+*    { box-sizing: border-box;} /* [1] */
+
+
+html { font-size:  14px; } /* [2] */
+
+
+h2, h6,
+p,
+ul {
+  margin: 0; /* [3] */
+}
+
+
+h2, h6 {
+  margin-bottom: 1.6666vh; /* [4] */
+}
+
+
+a {
+  text-decoration:  none;
+  cursor:           pointer;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #TYPOGRAFIA
+\*------------------------------------*/
+
+body {
+  color:        #211138;
+  font-family:  'Montserrat', sans-serif;
+}
+
+
+h2 { font-size: 4.4444vh; }
